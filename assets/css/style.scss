@@ -1,0 +1,33 @@
+#img-wrap{
+    position: relative;
+    #img{
+        cursor: crosshair;
+        border: 1px solid;
+    }
+}
+#log{
+    #coords{
+        background-color: rgba(222,222,222,.5);
+        font-family: 'Courier New', Courier, monospace;
+        li{
+            cursor: pointer;
+            counter-increment: list;
+            list-style-type: none;
+            position: relative;
+            font-weight: bold;
+            min-height: 24px;
+            &::before{
+                content: counter(list) ".";
+                left: -32px;
+                position: absolute;
+                text-align: right;
+                width: 26px;
+                font-weight: normal;
+                color: red;
+            }
+            &:hover{
+                background-color: rgba(222,222,222,.9);
+            }
+        }
+    }
+}
